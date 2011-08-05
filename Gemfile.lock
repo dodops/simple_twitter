@@ -92,6 +92,7 @@ PLATFORMS
 DEPENDENCIES
   faker
   gravatar_image_tag
+  i18n
   rails (= 3.0.9)
   rspec
   rspec-rails
