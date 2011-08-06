@@ -7,6 +7,8 @@ class User < ActiveRecord::Base
   has_many :following, :through => :relationships, :source => :followed
   has_many :followers, :through => :reverse_relationships, :source => :follower
 
+  before_save :encrypt_password
+
   email_regex = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 
   validates :name,
@@ -20,8 +22,6 @@ class User < ActiveRecord::Base
     :presence => true,
     :confirmation => true,
     :length => { :within => 6..40 }
-
-  before_save :encrypt_password
 
   def has_password?(submitted_password)
     encrypted_password == encrypt(submitted_password)
@@ -55,6 +55,7 @@ class User < ActiveRecord::Base
   end
 
   private
+
   def encrypt_password
     self.salt = make_salt if new_record?
     self.encrypted_password = encrypt(password)
