@@ -219,7 +219,7 @@ table.microposts tr td.micropost {
 
 table.microposts tr td.micropost span.timestamp {
   display: block;
-  font-size: 85%;
+  font-size: 75%;
   color: #666;
 }
 
@@ -236,7 +236,7 @@ div.user_info span.user_name {
 }
 
 div.user_info span.microposts {
-  font-size: 80%;
+  font-size: 70%;
 }
 
 form.new_micropost {
