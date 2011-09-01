@@ -23,6 +23,10 @@ SampleApp::Application.configure do
 
   # Use a different logger for distributed setups
   # config.logger = SyslogLogger.new
+  #
+  # Compress both stylesheets and JavaScripts
+  config.assets.js_compressor = :uglifier
+  config.assets.css_compressor = :sccs
 
   # Use a different cache store in production
   # config.cache_store = :mem_cache_store
