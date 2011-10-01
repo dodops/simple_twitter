@@ -29,6 +29,7 @@ group :test do
   gem 'autotest'
   gem 'autotest-rails-pure'
   gem 'spork'
+  gem 'webrat'
   gem 'turn', :require => false
 end
 
