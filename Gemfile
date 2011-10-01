@@ -19,13 +19,15 @@ group :assets do
 end
 
 group :development do
-  gem 'rspec-rails'
   gem 'rails_best_practices'
   gem 'faker'
 end
 
 group :test do
+  gem 'rspec-rails'
   gem 'rspec'
+  gem 'autotest'
+  gem 'autotest-rails-pure'
   gem 'spork'
   gem 'turn', :require => false
 end
