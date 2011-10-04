@@ -30,6 +30,7 @@ group :test do
   gem 'autotest-rails-pure'
   gem 'spork'
   gem 'webrat'
+  gem 'factory_girl_rails'
   gem 'turn', :require => false
 end
 
